@@ -1,0 +1,24 @@
+POST http://localhost:3000/reports
+Content-Type: application/json
+
+{
+    "make": "toyota",
+    "model": "corolla",
+    "year": 2022,
+    "milage": 100000,
+    "lng": 5,
+    "lat": 20,
+    "price": 50000
+}
+
+### Approve an existing report
+PATCH http://localhost:3000/reports/12
+Content-Type: application/json
+
+{
+    "approve": true
+}
+
+### get estimate for existing vehicle
+
+GET http://localhost:3000/reports?make=toyota&model=corolla&lng=5&lat=19&milage=2000&year=2022

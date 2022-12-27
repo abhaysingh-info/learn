@@ -1,0 +1,54 @@
+### Create a new user
+
+POST http://localhost:3000/auth/signup
+Content-Type: application/json
+
+{
+    "email": "test@gmail.com",
+    "password": "test@123"
+}
+
+
+### Sign-in a user
+
+POST http://localhost:3000/auth/signin
+Content-Type: application/json
+
+{
+    "email": "test@gmail.com",
+    "password": "test@123"
+}
+
+### Who Am I
+GET http://localhost:3000/auth/whoami
+
+### Set Fake Cookie
+POST http://localhost:3000/auth/fake-cookie/1000
+
+### Signout
+POST http://localhost:3000/auth/signout
+
+
+
+### Find user with given ID
+GET http://localhost:3000/auth/2
+
+
+### Find user with given email
+
+GET http://localhost:3000/auth?email=abhay@gmail.com
+
+
+### Delete a user with given ID
+
+DELETE http://localhost:3000/auth/10
+
+
+### Update a user
+
+PATCH http://localhost:3000/messages/2
+Content-Type: application/json
+
+{
+    "email": "abhayisdead@gmail.com"
+}
